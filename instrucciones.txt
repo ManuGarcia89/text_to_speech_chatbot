@@ -1,0 +1,3 @@
+1. instalar python 3
+2. instalar librerias con comando: pip install -r requirements.txt
+3. Correr script con comando: python3 speech_server_websocket.py
