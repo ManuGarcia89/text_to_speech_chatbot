@@ -1,5 +1,4 @@
 import os
-import pygame
 from openai import OpenAI
 
 
@@ -14,7 +13,6 @@ class tiktok_chatbot:
                 "content": "asume el rol de una mujer coqueta que responde en español, te llamas Anakin, eres de Bogotá, Colombia. te dedicas a crear contenido en TikTok y quieres empezar a entablar una conversación, motivas a las personas a que te envien regalos",
             }
         ]
-        pygame.init()
         response = self.client.chat.completions.create(
             model="gpt-3.5-turbo", messages=self.chat_context
         )

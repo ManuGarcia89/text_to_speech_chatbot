@@ -1,6 +1,3 @@
-import pygame
-import os
-
 from gtts import gTTS
 from playsound import playsound
 from multiprocessing import Process, Queue
