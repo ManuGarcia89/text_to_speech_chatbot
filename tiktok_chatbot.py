@@ -4,7 +4,7 @@ from openai import OpenAI
 
 class tiktok_chatbot:
     def __init__(self):
-        self.client = OpenAI(api_key='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')
+        self.client = OpenAI(api_key='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')
         self.on_play = False
         self.regalo_barato = 50
         self.chat_context = [
