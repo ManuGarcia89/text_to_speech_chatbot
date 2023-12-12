@@ -1,7 +1,7 @@
 import socket
 import json
 
-host = '127.0.0.1'
+host = "127.0.0.1"
 port = 12345
 
 # Crear un socket TCP
@@ -19,15 +19,15 @@ mensaje = {
     "gift_type": 1,
     "gift_price": 1,
     "gift_quantity": 20,
-    "tiktok_user": "blacknoise89"
+    "tiktok_user": "blacknoise89",
 }
 
 mensaje_json = json.dumps(mensaje)
 
-client_socket.send(mensaje_json.encode('utf-8'))
+client_socket.send(mensaje_json.encode("utf-8"))
 
 # Recibir la respuesta del servidor
-respuesta = client_socket.recv(1024).decode('utf-8')
+respuesta = client_socket.recv(1024).decode("utf-8")
 print(f"Respuesta del servidor: {respuesta}")
 
 
