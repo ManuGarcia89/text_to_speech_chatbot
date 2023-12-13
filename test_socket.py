@@ -27,9 +27,10 @@ mensaje_json = json.dumps(mensaje)
 client_socket.send(mensaje_json.encode("utf-8"))
 
 # Recibir la respuesta del servidor
-respuesta = client_socket.recv(1024).decode("utf-8")
-print(f"Respuesta del servidor: {respuesta}")
+# respuesta = client_socket.recv(1024).decode("utf-8")
+# print(f"Respuesta del servidor: {respuesta}")
 
 
 # Cerrar la conexión con el servidor
 client_socket.close()
+print("Conexión cerrada.")
