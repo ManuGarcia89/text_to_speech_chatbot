@@ -23,7 +23,7 @@ class TextToSpeech:
             self.text_to_speech(text)
 
     def text_to_speech(self, text):
-        tts = gTTS(text)
+        tts = gTTS(text, lang="es", slow=False, lang_check=False, tld="com.mx")
         filename = "temp_audio.mp3"
         tts.save(filename)
         playsound(filename)
