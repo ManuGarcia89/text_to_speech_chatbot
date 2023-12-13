@@ -15,7 +15,7 @@ print(f"Conectado al servidor en {host}:{port}")
 
 mensaje = {
     "type": "gift",
-    "gift_name": "taco",
+    "gift_name": "danie ss",
     "gift_type": 1,
     "gift_price": 1,
     "gift_quantity": 20,

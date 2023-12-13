@@ -12,6 +12,7 @@ class TextToSpeech:
     def __new__(cls):
         if cls._instance is None:
             pygame.init()
+            pygame.mixer.init()
             cls._instance = super(TextToSpeech, cls).__new__(cls)
             cls._instance.queue = Queue()
             cls._instance.process = Process(target=cls._instance.run)
@@ -44,12 +45,10 @@ class TextToSpeech:
         tts.write_to_fp(mp3_fp)
         mp3_fp.seek(0)
 
-        pygame.mixer.init()
         pygame.mixer.music.load(mp3_fp)
         pygame.mixer.music.play()
         while pygame.mixer.music.get_busy():
             pygame.time.Clock().tick(10)
-        pygame.mixer.quit()
 
     def text_to_speech(self, text):
         self.play_sound_in_memory(text)
@@ -59,4 +58,5 @@ class TextToSpeech:
 
     def stop(self):
         self.queue.put(None)
+        pygame.mixer.quit()
         self.process.join()
