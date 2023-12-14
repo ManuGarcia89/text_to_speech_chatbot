@@ -11,7 +11,7 @@ class TCPServer:
     def __init__(self, host: str = "127.0.0.1", port: int = 12345):
         self.host = host
         self.port = port
-        self.chat = tiktok_chatbot()
+        # self.chat = tiktok_chatbot()
         self.server_socket: socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.gift_handler = GifHandler()
 
